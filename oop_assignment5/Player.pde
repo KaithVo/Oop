@@ -36,15 +36,20 @@ class Player{
 }
   
 }
-
+//set key spacebar to fight
 void keyPressed(){
  
-  if (keyPressed == true){
+  if (key ==' ' ){
     action = "fight";
-  } else {
+  } 
+  }
+ 
+
+void keyRelease(){
+ 
+  if (key ==' ' ){
     action = "normal";
   }
-  
 }
 
 }
