@@ -15,6 +15,12 @@ class Background{
    //table
    fill(31,42,57);
    quad(0,310,400,370,400,400,0,400);
+   //computer
+   fill(36,40,49);
+   strokeWeight(2);
+   //player area
+   
+   
    
    
   }

@@ -5,10 +5,9 @@ class Player{
  
  void move(){
     stroke(0);
-   fill(255);
+   fill(255);  
    strokeWeight(2);
    rectMode(CENTER);
-   
    
    //////////////////////////
    //REMEMBER TO CHANGE THE MOUSEX AND Y TO MOUSEPRESS A & W///
@@ -38,24 +37,17 @@ class Player{
 }
   
 }
-//set key spacebar to fight
+//set key spacebar to fight and 
 void keyPressed(){
  
-  if (key ==' ' ){
-    action = "fight";
-  } else{
+  if (key ==' ' && keyPressed == true){
+      action = "fight";
+  } else {
     action = "normal";
-  }
-  }
-
-// how to make it release ??//
-void keyReleased(){
- 
-  if (key ==' ' ){
-    action = "fight";
-  } else{
-    action = "normal";
-  }
-  }
-
+  } 
+   }
 }
+// how to make it release ??//
+
+  
+ 
