@@ -1,27 +1,23 @@
-
+// Set variants 
 
 String action; // action when mouseclicked, player waves their sword//
 
 
 class Player{
-  
- //global variant
   float speed;
- 
-  PVector playerP =new PVector();
+PVector playerP =new PVector();
 
-  Player(float playerPX, float playerPY){
+ Player(float playerPX, float playerPY){
    playerP.x = playerPX;
    playerP.y = playerPY;
   }
-  
  void move(){
     stroke(0);
    fill(255);  
    strokeWeight(2);
    rectMode(CENTER);
    
-   //////////////////////////
+ //////////////////////////
    //REMEMBER TO CHANGE THE MOUSEX AND Y TO MOUSEPRESS A & W///
    ////////////////////
    if (action == "fight"){// fight action
@@ -49,8 +45,6 @@ class Player{
 }
   
 }
-
-
 //set key spacebar to fight and 
 void keyPressed(){
  
