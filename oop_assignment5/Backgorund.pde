@@ -1,4 +1,7 @@
 class Background {
+  // Any function about shape will be fouund mostly in this class
+  
+  // 1 & 2 &3
   void moodSetting() {
     switch (mood) {
       case 0: // Mood 0 settings
@@ -6,7 +9,7 @@ class Background {
         circle(((250) + (i * 13)), 300 - 40 * i, 15 * sin((frameCount / 20) - (i / 2)) + 20);
         circle(((200) + (i * 2)), 280 - 20 * i, 20 * sin((frameCount / 20) - (i / 2)) + 20);
     }
-          fill(213,217,229);
+     fill(213,217,229);
    noStroke();
     ellipse(200,325,110,95);
    quad(225,330,235,330,245,350,230,350);

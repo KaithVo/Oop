@@ -56,7 +56,9 @@ void keyPressed() {
   } else {
     action = "normal";
   }
-
+//set key A for going left
+//set D to going Right
+//#7 keypressed
   if (keyPressed) {
     if (key=='A'||key=='a') {
       playerP.x=playerP.x-speed;
@@ -68,7 +70,7 @@ void keyPressed() {
   }
   }
   
-
+//player oonly goes between 35 and 350 on the width
 void playerConstrain() {
   playerP.x = constrain( playerP.x, 35, 365);
 }

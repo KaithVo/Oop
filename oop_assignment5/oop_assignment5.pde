@@ -1,6 +1,6 @@
 
 int mood=0;
-
+// using the amountObject would be easier if you want to change the number of object showing on the screen
 Object [] amountObjects = new Object [3];
 ArrayList<Bubble> bubbles; // Declare an ArrayList to hold Bubble objects
 Area area = new Area();
@@ -11,7 +11,8 @@ PVector playerP =new PVector();
 //boolean if the "stress" go over line 5 times == lose
 boolean gameOverL; //automatic set to false even if we don't set it
 
-//keypress A& D to go left and right
+
+// #4 setting up the canvas
 
 void setup(){
   size(400,500);
@@ -27,6 +28,7 @@ void setup(){
     bubbles.add(new Bubble(x, y));
   }
   
+  // declare the object class each time
   for ( int obj = 0; obj< amountObjects.length; obj ++){
   amountObjects[obj] = new Object ();
 }
@@ -89,10 +91,8 @@ void keyPressed(){
      background.moodSetting(); 
    
 }
- if ((key=='r'||key=='R') && gameOverL == true) {
-   
+ if ((key=='r'||key=='R')|| gameOverL==true ) {  
     setup();
-  
   }
  
   if (key == ' ') {

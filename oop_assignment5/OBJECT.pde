@@ -37,7 +37,8 @@ class Object{
      move();
    }
   }
- //Object comes the bottom of the screen
+ //Object comes randomly from the bottom of the screen and goiing straight
+ // #5 random
   void move(){
     position = new PVector(random(50, 350), 610);
     velocity = new PVector();
