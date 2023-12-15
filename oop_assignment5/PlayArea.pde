@@ -14,12 +14,14 @@ void draw(){
    rect(200, 80, areaWidth, areaHeight);
   
 }
-   // if bugs goes over 220 , game over =true
-  void collide() {   
+ void collide() {   
      //create argument mention x/y   
-    if ((Bugs[0].position.y) <= 90) {
+    
+     for (int obj = 0; obj< amountObjects.length; obj ++){
+    if ((amountObjects[obj].position.y) <= 90) {
       gameOverL = true;
-    }
   }
+ }
+}
 }
   
