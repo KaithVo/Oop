@@ -4,6 +4,7 @@ String action;
 
 
 class Player {
+  
   float speed;
   PVector playerP =new PVector();
 
@@ -41,8 +42,17 @@ class Player {
 }
 
 void keyPressed() {
+ 
   if (key ==' ' && keyPressed == true) {
     action = "fight";
+      for (int obj = 0; obj< amountObjects.length; obj++) {
+      float distance = dist(playerP.x, playerP.y, amountObjects[obj].position.x, amountObjects[obj].position.y);
+      if (distance < 40) {
+        // If the player is close enough to the object, perform the action 
+        amountObjects[obj].move();
+        scoreCount+=1;
+       }
+      }
   } else {
     action = "normal";
   }
@@ -56,7 +66,8 @@ void keyPressed() {
     }
     speed = 7;
   }
-}
+  }
+  
 
 void playerConstrain() {
   playerP.x = constrain( playerP.x, 35, 365);

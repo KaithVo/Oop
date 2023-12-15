@@ -1,6 +1,6 @@
  //set up score variables
   int scoreCount;
-
+boolean hitbyPlayer;
 class Object{
   
   //set up pixie size variables for easy changing
@@ -32,6 +32,12 @@ class Object{
 
   }
   
+  void hit(){
+   if (hitbyPlayer){
+     move();
+   }
+  }
+ //Object comes the bottom of the screen
   void move(){
     position = new PVector(random(50, 350), 610);
     velocity = new PVector();
@@ -39,18 +45,7 @@ class Object{
     velocity.mult(random(3.2, 3.5)); 
   }
  
- void keyPressed(){
-  if (key==' ') {
-   for (int obj = 0; obj< amountObjects.length; obj++){
-     if ((playerP.y + 40 > amountObjects[obj].position.y) && (playerP.y-40<amountObjects[obj].position.x) && 
-      playerP.x + 20 > amountObjects[obj].position.x && playerP.x-20 < amountObjects[obj].position.x){
-        move();
-   
  
-   }
-   }
-}
-}
  void scoreDisplay() {
     fill (0);
     //alligns text to the left along given coordinates

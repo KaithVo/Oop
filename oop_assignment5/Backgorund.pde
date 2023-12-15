@@ -1,16 +1,8 @@
-//
-//
-int mood=0;
-
-class Background{
- void moodSetting(){
-   
- switch(mood){
-   
-   
-  //Stress mode 2
- case 0:
-     for (int i = 0; i < 5; i++) {
+class Background {
+  void moodSetting() {
+    switch (mood) {
+      case 0: // Mood 0 settings
+        for (int i = 0; i < 5; i++) {
         circle(((250) + (i * 13)), 300 - 40 * i, 15 * sin((frameCount / 20) - (i / 2)) + 20);
         circle(((200) + (i * 2)), 280 - 20 * i, 20 * sin((frameCount / 20) - (i / 2)) + 20);
     }
@@ -26,11 +18,10 @@ class Background{
    rect(175,350,30,10);
    stroke(0);
    line (185, 320, 190,325); 
-break;
+        break;
 
-//Stress mode 3
-case 1:
-  for (int i = 0; i < 5; i++) {
+      case 1: // Mood 1 settings
+        for (int i = 0; i < 5; i++) {
         circle(((250) + (i * 13)), 300 - 40 * i, 15 * sin((frameCount / 20) - (i / 2)) + 20);
         circle(((200) + (i * 2)), 280 - 20 * i, 20 * sin((frameCount / 24) - i) + 20);
         circle(((150) + (i * (-5))), 280 - 20 * i, 15 * sin((frameCount / 20) - (i / 2)) + 15);
@@ -51,10 +42,10 @@ case 1:
    line (175, 360, 190,375);
    
    fill(75, 50);
-break;
+        break;
 
- default:
-     for (int i = 0; i < 3; i++) {
+      default:
+         for (int i = 0; i < 3; i++) {
         circle(((250) + (i * 13)), 300 - 40 * i, 15 * sin((frameCount / 20) - (i / 2)) + 20);
     }
      fill(213,217,229);
@@ -63,13 +54,12 @@ break;
    quad(225,330,235,330,245,350,230,350);
    quad(245,350,230,350, 210, 380,280,380);
    quad(210, 380,280, 380, 315,490,190,490);
-  break;
-   }
+        break;
+    }
   }
-  
-  void display (){ 
-  
-   noStroke();
+
+  void display() {
+    noStroke();
    //table
    fill(31,42,57);
    quad(0,410,400,470,400,500,0,500);
@@ -87,11 +77,5 @@ break;
    quad(80, 340, 100, 345, 100, 460,80, 455);
 
 
-  }
- 
-  void mousePressed(){
-   
-      mood = (mood + 1) % 3;
-    
   }
 }
